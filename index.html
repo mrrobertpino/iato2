@@ -19,7 +19,7 @@ header{display:flex;justify-content:space-between;gap:20px;align-items:center;ba
 h1{font-size:34px;letter-spacing:-1px;margin:0;line-height:1}.subtitle{font-size:13px;letter-spacing:.09em;text-transform:uppercase;color:#dbe3f0;font-weight:900}.muted{color:#d8e0ed}.status{font-size:13px;color:#203047;background:#f6fbf8;border-radius:999px;padding:9px 14px;font-weight:850;white-space:nowrap}
 .progressStrip{display:grid;grid-template-columns:repeat(6,1fr);gap:8px;margin:0 0 16px}.progressStep{min-height:54px;padding:9px;border-radius:14px;border:2px solid #c8d1de;background:#e8edf3;color:#8591a0;text-align:center;font-size:11px;font-weight:950;display:flex;align-items:center;justify-content:center;cursor:pointer}.progressStep.unseen{opacity:.45}.progressStep.started{opacity:.78;background:#f4f6f9;color:#5d6978}.progressStep.complete{background:#fff;color:#2f4258;border-color:#90a1b7}.progressStep.current{opacity:1;background:#eefaf3;color:#1f6044;border-color:var(--ind);box-shadow:0 0 0 3px rgba(52,160,110,.18)}
 .card{background:rgba(255,255,255,.98);border:1px solid var(--line);border-radius:24px;padding:26px;box-shadow:var(--shadow)}h2{font-size:32px;line-height:1.1;margin:0 0 18px;color:var(--navy)}h3{margin:7px 0;color:var(--navy)}p{margin:8px 0 14px}
-.semantic{position:relative;border-radius:16px;padding:19px 20px 19px 25px;margin:18px 0;border:1px solid var(--line)}.semantic:before{content:"";position:absolute;left:0;top:0;bottom:0;width:8px;border-radius:16px 0 0 16px}.semanticTag{display:inline-block;font-size:11px;letter-spacing:.12em;font-weight:950;text-transform:uppercase;border-radius:8px;padding:5px 10px;margin-bottom:10px}
+.semantic{position:relative;border-radius:16px;padding:19px 20px 19px 25px;margin:18px 0;border:1px solid var(--line)}.semantic:before{content:"";position:absolute;left:0;top:0;bottom:0;width:8px;border-radius:16px 0 0 16px}.semanticTag{display:block;width:max-content;font-size:11px;letter-spacing:.12em;font-weight:950;text-transform:uppercase;border-radius:8px;padding:5px 10px;margin-bottom:10px}
 .learn{background:var(--learn-bg);border-color:#eadca7}.learn:before{background:var(--learn)}.learn .semanticTag{background:var(--learn);color:#4b3800}
 .sitework{background:var(--site-bg);border-color:#cbdcf3}.sitework:before{background:var(--site)}.sitework .semanticTag{background:var(--site);color:#fff}
 .paperwork{background:var(--paper-bg);border-color:#dad0f5}.paperwork:before{background:var(--paper)}.paperwork .semanticTag{background:var(--paper);color:#fff}
@@ -27,11 +27,13 @@ h1{font-size:34px;letter-spacing:-1px;margin:0;line-height:1}.subtitle{font-size
 .independent{background:var(--ind-bg);border-color:#c8e8d6}.independent:before{background:var(--ind)}.independent .semanticTag{background:var(--ind);color:#fff}
 label{display:block;font-weight:850;margin:14px 0 7px}textarea,input,select{width:100%;font:inherit;border:1px solid #aebbd0;border-radius:11px;padding:11px;background:#fff;color:var(--ink)}textarea{min-height:92px;resize:vertical}textarea:focus,input:focus,select:focus{outline:none;border-color:var(--site);box-shadow:0 0 0 3px rgba(78,134,216,.16)}
 button{border:0;border-radius:14px;background:var(--site);color:#fff;padding:11px 16px;font-weight:900;cursor:pointer}button.secondary{background:#e7edf6;color:#2e435d}button.green{background:var(--ind)}button:disabled{opacity:.45;cursor:not-allowed}
+.routeList{background:#fff;border:1px solid #cbd6e4;border-radius:14px;padding:14px 16px;margin:10px 0 14px;line-height:1.7}.routeList div+div{margin-top:4px}
 .footer{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:24px;flex-wrap:wrap}.tiny{font-size:12px;color:var(--muted)}
 section[hidden]{display:none}.matchGrid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.matchCard{background:#fff;border:1px solid #cbd6e4;border-radius:14px;padding:14px}.feedback{margin-top:12px;font-weight:900}.feedback.ok{color:#24724d}.feedback.bad{color:#a13d36}
 .timerBox{display:flex;align-items:center;gap:14px;flex-wrap:wrap;background:#fff;border:1px solid #cbd6e4;border-radius:16px;padding:16px;margin-top:12px}.timerReadout{font-size:38px;font-weight:950;letter-spacing:-1px;color:var(--navy);min-width:110px;text-align:center}.timerBox.running .timerReadout{color:#ad3c35}
 .submitGrid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.submitCard{background:#fff;border:1px solid #c8d6e2;border-radius:16px;padding:16px;display:grid;gap:10px}.submitCard strong{font-size:17px}.doneBox{display:none;margin-top:18px;background:#e9f8ef;border:2px solid #61b383;border-radius:18px;padding:22px;text-align:center;font-size:27px;font-weight:950;color:#246443}.doneBox.show{display:block}
 .drawerDock{position:fixed;right:-340px;top:18%;width:340px;height:64vh;z-index:50;transition:right .25s ease}.drawerDock.open{right:0}.drawerTab{position:absolute;left:-44px;top:20px;width:44px;height:112px;border:0;background:var(--ind);color:#fff;font-weight:950;border-radius:10px 0 0 10px;writing-mode:vertical-rl;letter-spacing:.08em;cursor:pointer}.drawer{height:100%;background:var(--navy);color:#fff;border-radius:14px 0 0 14px;padding:24px;overflow:auto;box-shadow:-8px 8px 26px rgba(0,0,0,.25)}.drawer h3{color:#fff;font-size:25px}.term{margin:16px 0}.term b{color:#9ee0bd}
+.siteCredit{max-width:1160px;margin:-8px auto 20px;padding:0 22px;text-align:right;font-size:12px;color:#6b7a8f}
 @media(max-width:800px){main{padding:12px}.progressStrip{grid-template-columns:repeat(3,1fr)}.matchGrid,.submitGrid{grid-template-columns:1fr}header{align-items:flex-start}.status{display:none}h1{font-size:28px}.drawerDock{width:300px;right:-300px}}
 </style>
 </head>
@@ -45,8 +47,8 @@ section[hidden]{display:none}.matchGrid{display:grid;grid-template-columns:repea
 <div class="card">
 
 <section data-page="0">
-  <h2>Do Now: Yesterday’s Internet</h2>
-  <div class="semantic paperwork"><span class="semanticTag">PAPER WORK</span>Doodle what you think the Internet looks like now.</div>
+  <h2>Do Now</h2>
+  <div class="semantic paperwork"><span class="semanticTag">PAPER WORK</span>What does the Internet look like? Doodle your thoughts, based on what you learned yesterday.</div>
   <div class="semantic sitework"><span class="semanticTag">SITE WORK</span><label>What is one fact, image, map, or idea from yesterday that stuck with you?</label><textarea data-key="yesterdayStuck"></textarea></div>
   <div class="semantic urgent"><span class="semanticTag">IMPORTANT</span>STOP HERE until we review yesterday together.</div>
 </section>
@@ -54,38 +56,42 @@ section[hidden]{display:none}.matchGrid{display:grid;grid-template-columns:repea
 <section data-page="1" hidden>
   <h2>What makes a route “best”?</h2>
   <div class="semantic learn"><span class="semanticTag">LEARN</span>A route is a path from one place to another.</div>
-  <div class="semantic sitework"><span class="semanticTag">SITE WORK</span><label>Pick the route you would choose:</label><select data-key="tripChoice"><option value="">Choose one…</option><option>Route A — 3 stops, 25 minutes</option><option>Route B — 6 stops, 18 minutes</option><option>Route C — 2 stops, 40 minutes</option></select><label>Why did you choose it?</label><textarea data-key="tripWhy"></textarea></div>
+  <div class="semantic sitework"><span class="semanticTag">SITE WORK</span>
+    <div class="routeList">
+      <div><strong>Route A:</strong> 3 stops, 1 transfer, 25 minutes</div>
+      <div><strong>Route B:</strong> 6 stops, 4 transfers, 18 minutes</div>
+      <div><strong>Route C:</strong> 2 stops, 0 transfers, 40 minutes</div>
+    </div>
+    <label>Pick the route you would choose:</label><select data-key="tripChoice"><option value="">Choose one…</option><option>Route A: 3 stops, 1 transfer, 25 minutes</option><option>Route B: 6 stops, 4 transfers, 18 minutes</option><option>Route C: 2 stops, 0 transfers, 40 minutes</option></select><label>Why did you choose it?</label><textarea data-key="tripWhy"></textarea></div>
   <div class="semantic learn"><span class="semanticTag">LEARN</span>For today, we will treat a route’s cost as the time it takes.</div>
   <div class="semantic paperwork"><span class="semanticTag">PAPER WORK</span>Complete the <b>Fastest Path</b> problem on your worksheet: find as many routes as you can from A to F, calculate each cost, and identify the fastest route.</div>
 </section>
 
 <section data-page="2" hidden>
   <h2>How fast do the possibilities grow?</h2>
-  <div class="semantic paperwork"><span class="semanticTag">PAPER WORK</span>Work through the path graphs on your worksheet and find as many different A-to-C paths as you can.</div>
+  <div class="semantic paperwork"><span class="semanticTag">PAPER WORK</span>Each graph adds one new node or connection to the previous graph. See how quickly the number of routes grows as the graph expands.<br><br>Take no more than 1 minute for each graph. Use the timer to keep track.</div>
   <div class="semantic urgent"><span class="semanticTag">IMPORTANT</span>Do not visit the same node twice in one path.</div>
-  <div class="semantic independent"><span class="semanticTag">INDEPENDENT ACTIVITY</span>Use the timer when Mr. Pino tells you to start.</div>
   <div class="timerBox" id="timerBox"><div class="timerReadout" id="timerReadout">1:00</div><button type="button" id="timerStart">Start 60 seconds</button><button type="button" id="timerReset" class="secondary">Reset</button></div>
-  <div class="semantic paperwork"><span class="semanticTag">PAPER WORK</span>Bonus: add <b>one new node or one new connection</b> to the final diagram where you think it will create the most new routes.</div>
   <div class="semantic sitework"><span class="semanticTag">SITE WORK</span><label>What happened to the number of possible routes as nodes and connections were added?</label><textarea data-key="pathGrowth"></textarea><label>The Internet has millions of connected devices. You’ve seen what happens when we add just one more node or connection. What problems can the Internet’s size create? What opportunities can it create?</label><textarea data-key="internetSizeProblemOpportunity"></textarea></div>
+  <div class="semantic paperwork"><span class="semanticTag">PAPER WORK</span>Add <b>one new node or one new connection</b> to the final diagram where you think it will create the most new routes.</div>
 </section>
 
 <section data-page="3" hidden>
   <h2>Check Yourself</h2>
   <div class="semantic sitework"><span class="semanticTag">SITE WORK</span>Match each definition to the correct term without using the vocab drawer.</div>
   <div class="matchGrid">
-    <div class="matchCard"><p><b>The path from one point to another.</b></p><select data-key="matchRoute"><option value="">Choose…</option><option>Route</option><option>Cost</option><option>Shortest path</option><option>Dijkstra's algorithm</option></select></div>
-    <div class="matchCard"><p><b>A number representing how “expensive” a path is.</b></p><select data-key="matchCost"><option value="">Choose…</option><option>Route</option><option>Cost</option><option>Shortest path</option><option>Dijkstra's algorithm</option></select></div>
-    <div class="matchCard"><p><b>The route with the lowest total cost.</b></p><select data-key="matchShortest"><option value="">Choose…</option><option>Route</option><option>Cost</option><option>Shortest path</option><option>Dijkstra's algorithm</option></select></div>
-    <div class="matchCard"><p><b>A method for finding the lowest-cost path through a network.</b></p><select data-key="matchDijkstra"><option value="">Choose…</option><option>Route</option><option>Cost</option><option>Shortest path</option><option>Dijkstra's algorithm</option></select></div>
+    <div class="matchCard"><p><b>The path from one point to another.</b></p><select data-key="matchRoute"><option value="">Choose…</option><option>Dijkstra's algorithm</option><option>Shortest path</option><option>Route</option><option>Cost</option></select></div>
+    <div class="matchCard"><p><b>A number representing how “expensive” a path is.</b></p><select data-key="matchCost"><option value="">Choose…</option><option>Shortest path</option><option>Route</option><option>Cost</option><option>Dijkstra's algorithm</option></select></div>
+    <div class="matchCard"><p><b>The route with the lowest total cost.</b></p><select data-key="matchShortest"><option value="">Choose…</option><option>Cost</option><option>Dijkstra's algorithm</option><option>Shortest path</option><option>Route</option></select></div>
+    <div class="matchCard"><p><b>A method for finding the lowest-cost path through a network.</b></p><select data-key="matchDijkstra"><option value="">Choose…</option><option>Route</option><option>Shortest path</option><option>Dijkstra's algorithm</option><option>Cost</option></select></div>
   </div>
   <button id="checkMatch" type="button" style="margin-top:14px">Check matches</button><div id="matchFeedback" class="feedback"></div>
+  <div class="semantic sitework"><span class="semanticTag">SITE WORK</span><label>Why is Dijkstra’s algorithm important when a network has many possible routes?</label><textarea data-key="dijkstraImportance"></textarea></div>
 </section>
 
 <section data-page="4" hidden>
   <h2>Back to the Internet</h2>
-  <div class="semantic learn"><span class="semanticTag">LEARN</span>Routers help select where data should go next as it moves through a network.</div>
   <div class="semantic sitework"><span class="semanticTag">SITE WORK</span><label>Why is having many possible routes useful if one part of a network becomes slow or unavailable?</label><textarea data-key="routerResilience"></textarea><label>Why can’t a computer simply “look at” a huge network the way you looked at the first tiny graph?</label><textarea data-key="routerScale"></textarea></div>
-  <div class="semantic urgent"><span class="semanticTag">IMPORTANT</span>This is a simplified model of a much more complicated real system.</div>
 </section>
 
 <section data-page="5" hidden>
@@ -97,6 +103,7 @@ section[hidden]{display:none}.matchGrid{display:grid;grid-template-columns:repea
 <div class="footer"><button class="secondary" id="back" type="button">← Back</button><span id="progress" class="tiny"></span><button id="next" type="button">Continue →</button></div>
 </div>
 </main>
+<div class="siteCredit">© Robert Pino · robertpino.com</div>
 
 <div class="drawerDock" id="drawerDock"><button class="drawerTab" id="vocabTab" type="button">VOCAB</button><div class="drawer"><h3>Vocabulary</h3><div class="term"><b>Network</b><br>A group of connected devices.</div><div class="term"><b>Route</b><br>A path from one point to another.</div><div class="term"><b>Node</b><br>A point in a graph or network.</div><div class="term"><b>Connection / edge</b><br>A link between two nodes.</div><div class="term"><b>Cost</b><br>A number representing how expensive a connection or path is.</div><div class="term"><b>Shortest path</b><br>The path with the lowest total cost.</div><div class="term"><b>Weighted graph</b><br>A graph where connections have values or costs.</div><div class="term"><b>Dijkstra’s algorithm</b><br>A method for finding a lowest-cost path through a weighted graph.</div><div class="term"><b>Router</b><br>A device that helps move data between networks and choose where it goes next.</div></div></div>
 
@@ -150,7 +157,7 @@ document.addEventListener('visibilitychange',()=>{if(document.hidden)save()});wi
 
 $('#exportBtn').onclick=()=>{
   save();const name=(state.answers.studentName||'student').trim();
-  const labels={yesterdayStuck:'DO NOW — WHAT STUCK',tripChoice:'ROUTE CHOICE',tripWhy:'WHY THAT ROUTE',pathGrowth:'PATH GROWTH',pathProblem:'PATH PROBLEM',pathOpportunity:'PATH OPPORTUNITY',matchRoute:'MATCH — ROUTE',matchCost:'MATCH — COST',matchShortest:'MATCH — SHORTEST PATH',matchDijkstra:'MATCH — DIJKSTRA',routerResilience:'ROUTER — MANY ROUTES',routerScale:'ROUTER — SCALE',exitProblemOpportunity:'EXIT — PROBLEM + OPPORTUNITY',exitDijkstra:'EXIT — DIJKSTRA',exitFewest:'EXIT — FEWEST STEPS'};
+  const labels={yesterdayStuck:'DO NOW — WHAT STUCK',tripChoice:'ROUTE CHOICE',tripWhy:'WHY THAT ROUTE',pathGrowth:'PATH GROWTH',pathProblem:'PATH PROBLEM',pathOpportunity:'PATH OPPORTUNITY',matchRoute:'MATCH — ROUTE',matchCost:'MATCH — COST',matchShortest:'MATCH — SHORTEST PATH',matchDijkstra:'MATCH — DIJKSTRA',dijkstraImportance:'DIJKSTRA — IMPORTANCE',routerResilience:'ROUTER — MANY ROUTES',routerScale:'ROUTER — SCALE',exitProblemOpportunity:'EXIT — PROBLEM + OPPORTUNITY',exitDijkstra:'EXIT — DIJKSTRA',exitFewest:'EXIT — FEWEST STEPS'};
   const body=['INTERNET ROUTING LAB','Student: '+name,''].concat(Object.entries(labels).map(([k,label])=>`${label}\n${state.answers[k]||''}`)).join('\n\n');
   const blob=new Blob([body],{type:'text/plain'}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download=(name||'student').replace(/[^a-z0-9_-]+/gi,'_')+'_internet_routing.txt';document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1000);state.exported=true;save();$('#exportStatus').textContent='✓ Backup downloaded';$('#doneBox').classList.toggle('show',!!state.submittedId&&!!state.exported);
 };
